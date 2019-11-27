@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <Route path='/' exact component={Home} />
+        <Route path='/' exact component={Shop} />
         <Route path='/about' component={About} />
         <Route path='/shop' exact component={Shop} />
         <Route path='/shop/:id' component={ItemDetail} />
@@ -20,10 +20,10 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
+// const Home = () => (
+//   <div>
+//     <h1>Home Page</h1>
+//   </div>
+// );
 
 export default App;

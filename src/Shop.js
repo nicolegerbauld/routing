@@ -8,6 +8,9 @@ function Shop() {
     fetchItems()
 
   },[]);
+  const newsStyle = {
+    color: 'black'
+  };
 
   const [items, setItems] = useState([]);
 
@@ -24,9 +27,12 @@ function Shop() {
   return (
     <div>
       {items.map(item => (
-        <h1 key={item.url}>
-        <Link to={`/shop/${item.url}`}>{item.author}</Link>
-        </h1>
+        <p className="news-title" key={item.url}>
+        <p> 1.↑
+        <Link style={newsStyle} to={`/shop/${item.url}`}>{item.title}</Link>
+          |  {item.source.name} by {item.author} | 2 hours ago </p>
+        </p>
+
         ))}
     </div>
   );
